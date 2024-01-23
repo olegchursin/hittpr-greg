@@ -1,0 +1,149 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Brands from '~/components/widgets/Brands.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Image from '~/components/common/Image.astro';
+import gregPosterImg from '~/assets/images/greg-web-poster.jpg';
+
+const metadata = {
+  title: 'Greg: The Secret to My Success',
+};
+
+const watchOnYoutube = {
+  target: '_blank',
+  text: 'Watch on Youtube',
+  href: 'https://www.youtube.com/watch?v=9Qw7Q0jZQqo',
+  variant: 'primary',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="A film by marina hitt"
+    actions={[
+      // watchOnYoutube
+    ]}
+  >
+    <Fragment slot="title">Greg: The Secret to My Success</Fragment>
+
+    <Fragment slot="subtitle">
+      <div>From $70 and a Dream to a Glass Empire: The Inspiring Journey of a Soviet Immigrant.</div>
+      <div class="mt-6 text-sm">
+        2023 | <span class="border p-0.5">G – General Audiences</span> | 34m | Documentary
+      </div>
+    </Fragment>
+
+    <Fragment slot="image">
+      <div class="relative">
+        <Image src={gregPosterImg} alt="Greg: The Secret to My Success" width={550} height={760} />
+      </div>
+    </Fragment>
+  </Hero>
+
+  <Features2
+    title="About the film"
+    subtitle='A film by producer and director Marina Hitt tells the story of a Soviet immigrant who arrived in the USA in the late 70s with an infant in arms and 70 dollars to his name. Years later, thanks to the support of his wife, he earned a multi-million dollar fortune and created a "glass" empire that services the skyscrapers of Manhattan.'
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-gray-900"></div>
+    </Fragment>
+  </Features2>
+
+  <Brands
+    title="Recognition & Awards"
+    subtitle="Our documentary has garnered critical acclaim, highlighting its impact and excellence in the world of documentary filmmaking. This reflects our commitment to bringing compelling and thought-provoking stories to the screen. Film festival honors and awards, each accolade serves as a testament to the hard work, creativity, and passion that went into crafting Greg: The Secret to My Success."
+    icons={[]}
+    images={[
+      {
+        src: 'img/festival-01.png',
+        alt: 'THE GREAT BRITAIN SILVER SCREEN AWARDS',
+      },
+      {
+        src: 'img/festival-02.png',
+        alt: 'KOREA INTERNATIONAL SHORT FILM FESTIVAL',
+      },
+      {
+        src: 'img/festival-03.png',
+        alt: 'PARIS CINE FIESTA',
+      },
+
+      {
+        src: 'img/festival-04.png',
+        alt: 'Crown Point International Film Festival',
+      },
+      {
+        src: 'img/festival-05.png',
+        alt: 'Dubai International Cine Carnival',
+      },
+      {
+        src: 'img/festival-06.png',
+        alt: 'HONG KONG INTERNATIONAL FILM CARNIVAL',
+      },
+      {
+        src: 'img/festival-07.png',
+        alt: 'Navy international film festival',
+      },
+      {
+        src: 'img/festival-08.png',
+        alt: 'Cannes World Film Festival',
+      },
+      {
+        src: 'img/festival-09.png',
+        alt: 'Oniros Film Awards® - New York',
+      },
+      {
+        src: 'img/festival-10.png',
+        alt: 'Himachal Short Film Festival',
+      },
+      {
+        src: 'img/festival-11.png',
+        alt: 'Alibag Short Film Festival',
+      },
+    ]}
+  />
+
+  <Features3
+    title="Contact us"
+    subtitle="We’re here to help and answer any question you might have."
+    columns={3}
+    items={[
+      {
+        title: 'Producer & Director',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'Marina Hitt',
+          href: 'mailto:marina@hittpr.com',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'YouTube',
+        icon: 'tabler:brand-youtube',
+        callToAction: {
+          target: '_blank',
+          text: 'HITT PR',
+          href: 'https://www.youtube.com/channel/UC5Y7mWK-FtD3nh_AG367y-g',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'HITT PR',
+        icon: 'tabler:globe',
+        callToAction: {
+          target: '_blank',
+          text: 'hittpr.com',
+          href: 'hittpr.com',
+          variant: 'link',
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-gray-900"></div>
+    </Fragment>
+  </Features3>
+</Layout>

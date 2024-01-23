@@ -1,0 +1,14 @@
+---
+import { SITE } from '~/utils/config';
+import hittprLogo from '~/assets/images/hittpr-logo-sq.png';
+import Image from '~/components/common/Image.astro';
+---
+
+<span
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white flex items-center gap-2"
+>
+  <Image class="rounded" src={hittprLogo} alt="Greg: The Secret to My Success" width={30} />
+  <div>
+    {SITE?.name}
+  </div>
+</span>
