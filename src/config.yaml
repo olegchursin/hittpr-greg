@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Greg
+    default: 'Greg: The Secret To My Success'
     template: '%s — Greg'
-  description: "\U0001F680 Greg: The Secret to my Succeess"
+  description: 'From $70 and a Dream to a Glass Empire: The Inspiring Journey of a Soviet Immigrant.'
   robots:
     index: true
     follow: true
