@@ -7,6 +7,7 @@ import Brands from '~/components/widgets/Brands.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Image from '~/components/common/Image.astro';
 import gregPosterImg from '~/assets/images/greg-web-poster.jpg';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
   title: 'Greg: The Secret to My Success',
@@ -188,44 +189,67 @@ const watchOnYoutube = {
   </Features2>
 
   <Features3
-    title="Contact us"
-    subtitle="We’re here to help and answer any question you might have."
+    title="Credentials"
+    subtitle="Meet the masterminds behind Greg: The Secret to My Success"
     columns={3}
+    defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Producer & Director',
-        icon: 'tabler:mail',
-        callToAction: {
-          target: '_blank',
-          text: 'Marina Hitt',
-          href: 'mailto:marina@hittpr.com',
-          variant: 'link',
-        },
+        title: 'Writer & Director',
+        description: 'Marina Hitt',
       },
       {
-        title: 'YouTube',
-        icon: 'tabler:brand-youtube',
-        callToAction: {
-          target: '_blank',
-          text: 'HITT PR',
-          href: 'https://www.youtube.com/channel/UC5Y7mWK-FtD3nh_AG367y-g',
-          variant: 'link',
-        },
+        title: 'Screenwriter',
+        description: 'Marina Hitt',
+      },
+      {
+        title: 'Editor',
+        description: 'Nick Logaiski',
+      },
+      {
+        title: 'Producer',
+        description: 'Marina Tomchinsky',
+      },
+      {
+        title: 'Camera Operators',
+        description: 'Nick Logaiski, Michael Gogidze, Vladislav Kovalev',
+      },
+      {
+        title: 'Actor',
+        description: 'Vladimir Starostin',
+      },
+      {
+        title: 'Narrator',
+        description: 'Dmitry Talypov',
+      },
+      {
+        title: 'Videos and Photographs',
+        description: 'Taken from the persnal archivs of M. Tomchinsky, Marina Hitt, and Tatyana Bulanova',
+      },
+      {
+        title: 'Music',
+        description: '“So. the Days Flow By”: written by G. Zarenkova and M. Krylov. Performed by Tatiana Bulanova',
+      },
+    ]}
+  />
+
+  <Features2
+    title="We’re here to help"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Marina Hitt',
+        description: 'marina@hittpr.com',
+        icon: 'tabler:mail',
+        link: 'mailto:marina@hittpr.com',
       },
       {
         title: 'HITT PR',
+        description: 'hittpr.com',
         icon: 'tabler:globe',
-        callToAction: {
-          target: '_blank',
-          text: 'hittpr.com',
-          href: 'hittpr.com',
-          variant: 'link',
-        },
+        link: 'https://hittpr.com',
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-gray-900"></div>
-    </Fragment>
-  </Features3>
+  />
 </Layout>
