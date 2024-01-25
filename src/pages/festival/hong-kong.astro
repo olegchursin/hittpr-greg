@@ -1,7 +1,7 @@
 ---
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import certificate from '~/assets/images/certificate-hong-kong.jpg';
+import certificate from '~/assets/images/certificate-hong-kong-original.jpg';
 import Image from '~/components/common/Image.astro';
 
 const fetivalTitle = 'Hong Kong International Film Carnival';
@@ -13,19 +13,12 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero tagline={fetivalTitle}>
-    <Fragment slot="title">Winner</Fragment>
+    <Fragment slot="title">Documentary Film</Fragment>
 
     <Fragment slot="image">
       <div class="relative">
-        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={760} height={550} />
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={550} height={760} />
       </div>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      "As the respected Jury Member of Hong Kong International Film Carnival officially declared your project as
-      the WINNER of HKIFC , we take the pleasure to Congratulate you and your entire team. You must know that the
-      journey from official selection to award winner among so many deserving projects was not at all easy. You achieved
-      it! " - Director, Hong Kong International Film Carnival
     </Fragment>
   </Hero>
 </Layout>
