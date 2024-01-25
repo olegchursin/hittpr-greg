@@ -1,10 +1,10 @@
 ---
 import Hero from '~/components/widgets/Hero.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import certificate from '~/assets/images/certificate-dubai-director.jpg';
+import certificate from '~/assets/images/certificate-korea.jpg';
 import Image from '~/components/common/Image.astro';
 
-const fetivalTitle = 'Dubai International Cine Carnival';
+const fetivalTitle = 'Korea International Short Film Festival';
 
 const metadata = {
   title: fetivalTitle,
@@ -13,11 +13,11 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero tagline={fetivalTitle}>
-    <Fragment slot="title">Best Director</Fragment>
+    <Fragment slot="title">Best Sound Design</Fragment>
 
     <Fragment slot="image">
       <div class="relative">
-        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={780} height={600} />
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={760} height={550} />
       </div>
     </Fragment>
   </Hero>
