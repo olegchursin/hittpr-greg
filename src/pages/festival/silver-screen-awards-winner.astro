@@ -1,0 +1,30 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import certificate from '~/assets/images/certificate-britain-silver-screen-documentary.jpg';
+import Image from '~/components/common/Image.astro';
+
+const fetivalTitle = 'Great Britain Silver Screen Awards';
+
+const metadata = {
+  title: fetivalTitle,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline={fetivalTitle}>
+    <Fragment slot="title">Best Documentary</Fragment>
+
+    <Fragment slot="image">
+      <div class="relative">
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={760} height={550} />
+      </div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      "Congratulations on Winning the Best Documentary at the Great Britain Silver Screen Awards! Your dedication and
+      hard work have truly paid off, resulting in a remarkable and impactful documentary." - Director, Great Britain
+      Silver Screen Awards
+    </Fragment>
+  </Hero>
+</Layout>

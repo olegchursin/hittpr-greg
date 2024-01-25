@@ -1,0 +1,31 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import certificate from '~/assets/images/certificate-dubai-director.jpg';
+import Image from '~/components/common/Image.astro';
+
+const fetivalTitle = 'Dubai International Cine Carnival';
+
+const metadata = {
+  title: fetivalTitle,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline={fetivalTitle}>
+    <Fragment slot="title">Winner</Fragment>
+
+    <Fragment slot="image">
+      <div class="relative">
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={760} height={550} />
+      </div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      "Congratulations from Dubai International Cine Carnival on Winning the HKIFC Award! It is with great honor that
+      we, the Jury Members, officially declare your project 'The Winner' at the HKIFC. Your dedication and excellence
+      have truly set you apart. Congratulations to you and your entire team on this outstanding accomplishment!" -
+      Director, Dubai International Cine Carnival
+    </Fragment>
+  </Hero>
+</Layout>

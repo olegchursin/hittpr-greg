@@ -1,0 +1,30 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import certificate from '~/assets/images/certificate-crown-point.jpg';
+import Image from '~/components/common/Image.astro';
+
+const fetivalTitle = 'Crown Point International Film Festival';
+
+const metadata = {
+  title: fetivalTitle,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline={fetivalTitle}>
+    <Fragment slot="title">Winner: Best Director</Fragment>
+
+    <Fragment slot="image">
+      <div class="relative">
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={760} height={550} />
+      </div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      "Congratulations for being the Winner: Best Director at Crown Point International Film Festival! Your film stood
+      out among hundreds of submissions. We celebrate your exceptional work. - Director, Crown Point International Film
+      Festival
+    </Fragment>
+  </Hero>
+</Layout>

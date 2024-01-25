@@ -1,0 +1,55 @@
+---
+import { twMerge } from 'tailwind-merge';
+import { Icon } from 'astro-icon/components';
+import Button from './Button.astro';
+
+const {
+  title,
+  defaultIcon = '',
+  description,
+  icon,
+  link,
+  callToAction,
+  itemClasses = {},
+  panelClass,
+  defaultIconClass,
+  titleClass,
+  descriptionClass,
+} = Astro.props as any;
+---
+
+{
+  link ? (
+    <a href={link} class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+      <div>
+        {(icon || defaultIcon) && (
+          <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+        )}
+        <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+        {description && (
+          <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+        )}
+        {callToAction && (
+          <div class="mt-2">
+            <Button {...callToAction} />
+          </div>
+        )}
+      </div>
+    </a>
+  ) : (
+    <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+      {(icon || defaultIcon) && (
+        <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
+      )}
+      <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+      {description && (
+        <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
+      )}
+      {callToAction && (
+        <div class="mt-2">
+          <Button {...callToAction} />
+        </div>
+      )}
+    </div>
+  )
+}

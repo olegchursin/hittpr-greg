@@ -40,6 +40,12 @@ export default defineConfig({
       include: {
         tabler: ['*'],
         'flat-color-icons': [
+          'advertising',
+          'camcorder-pro',
+          'diploma-1',
+          'diploma-2',
+          'film-reel',
+          'film',
           'template',
           'gallery',
           'approval',

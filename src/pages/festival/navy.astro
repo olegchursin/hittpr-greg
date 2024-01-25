@@ -1,0 +1,31 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import certificate from '~/assets/images/certificate-navy.jpg';
+import Image from '~/components/common/Image.astro';
+
+const fetivalTitle = 'Navy International Film Carnival';
+
+const metadata = {
+  title: fetivalTitle,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline={fetivalTitle}>
+    <Fragment slot="title">Award Winner</Fragment>
+
+    <Fragment slot="image">
+      <div class="relative">
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={760} height={550} />
+      </div>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      "Heartfelt Congratulations on Your Triumph at the Navy International Film Carnival! We are thrilled to name your
+      project as the distinguished WINNER. This accolade is a testament to your exceptional talent and hard work.
+      Surpassing numerous commendable projects to attain this award is no small feat. Well done to you and your entire
+      team for this remarkable achievement!" - Director, Navy International Film Carnival
+    </Fragment>
+  </Hero>
+</Layout>
