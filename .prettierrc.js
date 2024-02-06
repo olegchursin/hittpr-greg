@@ -4,7 +4,7 @@ module.exports = {
   semi: true,
   singleQuote: true,
   tabWidth: 2,
-  trailingComma: 'es5',
+  trailingComma: 'none',
   useTabs: false,
 
   plugins: [require.resolve('prettier-plugin-astro')],
