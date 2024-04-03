@@ -1,0 +1,24 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import certificate from '~/assets/images/certificate-new-york.jpg';
+import Image from '~/components/common/Image.astro';
+
+const fetivalTitle = 'The Best Actor & Director Awards – New York';
+
+const metadata = {
+  title: fetivalTitle
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero tagline={fetivalTitle}>
+    <Fragment slot="title">Best Director</Fragment>
+
+    <Fragment slot="image">
+      <div class="relative">
+        <Image src={certificate} alt=`${fetivalTitle}: Certificate` width={566} height={800} />
+      </div>
+    </Fragment>
+  </Hero>
+</Layout>
